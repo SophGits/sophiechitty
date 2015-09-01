@@ -18,13 +18,13 @@ h1, h2, h3, p.jobtitle {
   font-family: 'Merriweather', serif;
   font-weight: 700;
 }
-
 h1, h2, h3 {
   margin-bottom: 0.5rem;
 }
 h1 { font-size: 3rem; line-height: 4rem; }
 h2 { font-size: 2rem; line-height: 3rem; }
 h3 { font-size: 1.6rem; line-height: 2.2rem; }
+a, a:link, a:visited, a:hover, a:active{ color: #0E3051; }
 
 article#cv {
   // border: 1px solid gray;
@@ -38,22 +38,28 @@ article#cv {
 header {
   padding: 1rem;
   background-color: @grey;
-  ul li {
-    display: inline-block;
-    padding: 1rem 1rem 1rem 0;
-    i { margin-right: 0.4rem; }
-    &.email {}
-    &.phone {}
-    &.postal {}
-    &.linkedin {}
-    &.portfolio {}
+  ul {
+    margin: 2rem 0;
+    li {
+      display: inline-block;
+      padding: 0.5rem 2rem 0.5rem 0;
+      i.fa {
+        width: 2rem;
+        font-size: 1.8rem;
+        margin-right: 0.7rem;
+      }
+      &.email {}
+      &.phone {}
+      &.postal {}
+      &.linkedin {}
+      &.portfolio {}
+    }
   }
-
 }
 
 section.introduction {
   background-color: @white;
-  padding: @pad;
+  padding: @pad 3.5rem;
   margin: 0 -2.5rem;
 }
 
