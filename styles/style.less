@@ -11,20 +11,26 @@
   font-weight: 400;
 }
 li, p {
-  font-size: 1.4rem;
-  line-height: 1.9rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1.2rem;
 }
 h1, h2, h3, p.jobtitle {
   font-family: 'Merriweather', serif;
   font-weight: 700;
 }
 h1, h2, h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 h1 { font-size: 3rem; line-height: 4rem; }
 h2 { font-size: 2rem; line-height: 3rem; }
 h3 { font-size: 1.6rem; line-height: 2.2rem; }
 a, a:link, a:visited, a:hover, a:active{ color: #0E3051; }
+
+section.introduction p,
+section.interests .inner p {
+
+}
 
 article#cv {
   // border: 1px solid gray;
@@ -80,20 +86,18 @@ section.skills {
   section {
     display: inline-block;
     padding: @pad;
-    width: 24.6%;
+    width: 33%;
     vertical-align: top;
     background-color: @white;
   }
   section.languages {
+
   }
   section.libraries {
-    // background-color: pink;
+
   }
   section.tools {
-    // background-color: orange;
-  }
-  section.methodologies {
-    // background-color: lightyellow;
+
   }
 } // skills
 
@@ -104,7 +108,8 @@ section.work-history {
     background-color: @white;
     padding: @pad;
     margin: 0 0 @pad 0;
-    .date { font-size: 1rem; text-transform: uppercase; }
+    .date { font-size: 1rem; text-transform: uppercase; margin-bottom: 0; }
+    .employer { font-size: 1rem; font-weight: 700; text-transform: uppercase; }
     .jobtitle { line-height: 3rem; }
     .text {}
   }
@@ -116,3 +121,4 @@ section.recent-work {
   h2 {}
   ul li { background-color: @white; margin-bottom: 0.6rem; padding: @pad;  }
 }
+
