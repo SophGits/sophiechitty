@@ -149,8 +149,14 @@ section.recent-work {
     margin-bottom: 2px;
     margin-left: @pad;
     margin-right: @pad;
-    padding-left: @pad;
+    padding-left: 0;
     padding-right: @pad;
+  }
+
+  section.interests,
+  section.skills,
+  section.work-history {
+    section, section.past-job { padding-left: 0; margin-left: 0; }
   }
 
   div.about-interests,
