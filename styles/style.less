@@ -3,19 +3,23 @@
 @pad: 1rem;
 
 // Colours
-@grey: #8099B2;
+// @grey: #8099B2;
+@grey: #9AB2CA;
 @white: #FFFFEB;
+@blue: #07437D;
 
 *, ul li, p {
-  font-family: 'Merriweather', serif;
+  font-family: 'Yantramanav', Arial serif;
   font-weight: 400;
 }
 li, p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 2rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.1rem;
 }
-h1, h2, h3, p.jobtitle {
+header ul li, h1, h2, h3,
+p.date, p.jobtitle,
+section.recent-work p, section.recent-work ul li a {
   font-family: 'Merriweather', serif;
   font-weight: 700;
 }
@@ -25,9 +29,9 @@ h1, h2, h3 {
 h1 { font-size: 3rem; line-height: 4rem; }
 h2 { font-size: 2rem; line-height: 3rem; }
 h3 { font-size: 1.6rem; line-height: 2.2rem; }
-a, a:link, a:visited, a:hover, a:active{ color: #0E3051; }
+a, a:link, a:visited, a:hover, a:active{ color: @blue; }
 
-section.introduction p,
+section.about p,
 section.interests .inner p {
 
 }
@@ -46,6 +50,7 @@ header {
   background-color: @grey;
   ul {
     margin: 2rem 0;
+    // span { display: block; }
     li {
       display: inline-block;
       padding: 0.5rem 2rem 0.5rem 0;
@@ -63,17 +68,17 @@ header {
   }
 }
 
-section.introduction {
+section.about {
   background-color: @white;
   padding: @pad 3.5rem;
   margin: 0 -2.5rem;
 }
 
 section.interests {
-  padding: @pad;
+  padding: 1.8rem @pad @pad @pad;
   background-color: @grey;
   section {
-    padding: @pad;
+    padding: 1.9rem @pad @pad @pad;
     background-color: @white;
   }
 
@@ -122,3 +127,54 @@ section.recent-work {
   ul li { background-color: @white; margin-bottom: 0.6rem; padding: @pad;  }
 }
 
+@media print {
+
+  article#cv {
+    padding: 0;
+    margin: 0;
+  }
+
+  header {
+    margin-top: @pad;
+    h1 { border-bottom: 1px solid gray; padding-bottom: @pad; }
+    ul span { display: inline; }
+  }
+
+  section.about {
+    border-bottom: 1px solid gray;
+    margin-bottom: 2px;
+    margin-left: @pad;
+    margin-right: @pad;
+    padding-left: @pad;
+    padding-right: @pad;
+  }
+
+  div.about-interests,
+  section.skills { display: inline-block; vertical-align: top; }
+
+  div.about-interests { width: 80%; }
+
+  section.skills {
+    padding-top: 0;
+    width: 19%;
+    > section { display: block; width: 100%; }
+  }
+
+  section.work-history {
+    > section {
+      display: inline-block;
+      vertical-align: top;
+      width: 49.5%;
+      &:nth-child(2),
+      &:nth-child(3) {
+        height: 27rem;
+      }
+    }
+  }
+
+  section.recent-work {
+    display: none;
+  }
+
+  // a:link:after, a:visited:after { content: " (" attr(href) ") "; font-size: 90%; }
+}
