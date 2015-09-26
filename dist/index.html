@@ -1,37 +1,73 @@
 <html>
 <head>
+  <!--  DO PRINT STYLSHEET http://www.smashingmagazine.com/2011/11/how-to-set-up-a-print-style-sheet/ -->
+
   <title>Sophie Chitty CV</title>
   <meta charset="UTF-8">
    <link rel="stylesheet" href="styles/style.min.css" />
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-   <!-- // <script src="scripts/script.min.js"></script> -->
+   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Yantramanav:400,700' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 
   <article id="cv">
 
     <header>
+      <aside class="download-area desktop-only">
+        <a href="SophieChitty_CV.pdf" class="download" download>
+          <i class="fa fa-download"></i> Download a copy
+        </a>
+        <!-- <span>IE not supported</span> -->
+      </aside>
+
       <h1>Sophie Chitty</h1>
       <ul class="contact">
-        <li class="email"><i class="fa fa-envelope-o"></i>Sophie.Chitty1@gmail.com</li>
+        <li class="email"><i class="fa fa-envelope"></i>
+          <a href="mailto:Sophie.Chitty1@gmail.com?Subject=Saw%20your%20CV%20on%20GitHub" target="_blank">
+          Sophie.Chitty1@gmail.com</a>
+        </li>
         <li class="phone"><i class="fa fa-phone"></i>07807 606 717</li>
-        <li class="postal"><i class="fa fa-map-marker"></i>14 Kinveachy Gardens, London SE7 8ED</li>
-        <li class="linkedin"><i class="fa fa-linkedin"></i><a href="uk.linkedin.com/in/sophiechitty">uk.linkedin.com/in/sophiechitty</a></li>
-        <li class="portfolio"><i class="fa fa-github"></i><a href="sophgits.github.io/cv">sophgits.github.io/cv</a></li>
+        <span></span>
+        <li class="linkedin"><i class="fa fa-linkedin"></i><a href="uk.linkedin.com/in/sophiechitty" target="_blank">uk.linkedin.com/in/sophiechitty</a></li>
+        <li class="portfolio" alt="video portfolio"><i class="fa fa-play-circle"></i><a href="https://sophgits.github.io/cv" alt="video portfolio" target="_blank">sophgits.github.io/cv</a></li>
+        <span></span>
+        <li class="github"><i class="fa fa-github"></i><a href="https://github.com/SophGits" target="_blank">github.com/SophGits</a></li>
+        <span></span>
+        <li class="postal"><i class="fa fa-map-marker"></i>Charlton, London SE7 8ED</li>
       </ul>
     </header>
 
-    <section class="introduction">
-      <h2>About</h2>
-      <p>I'm looking for a JavaScript-based role that can provide new challenges and support my continued learning.</p>
-      <p>Having worked almost exclusively on the front end I want to broaden my knowledge base and discoever the rest of the stack...preferable in JS.</p>
-      <p>I am a diligent learner with a persistent eye for detail as well as a genuine interest in improving my skills in all areas of web development.</p>
-    </section> <!-- introduction -->
+    <div class="about-interests">
+
+      <section class="about">
+        <h2>About</h2>
+        <p>A diligent learner with a persistent eye for detail as well as a genuine interest in improving my skills in all areas of web development.</p>
+        <p>I'm looking for a JavaScript-based role that can provide new challenges and support my continued learning.</p>
+        <p>Having worked almost exclusively on the front end I want to broaden my knowledge base and discover the rest of the stack.</p>
+        <p>I have an interest in data visualisation and a goal of writing vanilla JavaScript to a high standard.</p>
+      </section> <!-- about -->
+
+      <section class="interests">
+        <h2>Interests</h2>
+
+        <section class="inner">
+          <p>In my spare time I enjoy experimenting with new (to me) technologies, including Node, React and D3.</p>
+          <p>I aim to be able to write expressive, clean code - and in particular to have a thorough understanding of vanilla JavaScript.</p>
+          <p>I picked up a working knowledge of HTML, CSS, jQuery, JavaScript and Backbone.js 'after hours', so I hope to be able to replicate this with Node, React and D3 - and eventually use them in a professional setting.</p>
+          <p>I really like learning new (Unix) command line and git commands, and text editor / Mac shortcuts in general!</p>
+        </section>
+
+      </section> <!-- interests -->
+
+    </div> <!-- about-interests -->
 
     <section class="skills">
       <h2>Key skills</h2>
 
       <section class="languages">
+        <h3>Languages</h3>
         <ul>
           <li>JavaScript, jQuery</li>
           <li>CSS(3), Sass, LESS</li>
@@ -40,25 +76,20 @@
       </section>
 
       <section class="libraries">
+        <h3>Libraries</h3>
         <ul>
-          <li>Twitter Bootstrap</li>
+          <li>Twitter Bootstrap, Zurb Foundation</li>
           <li>Backbone.js</li>
+          <li>D3.js</li>
         </ul>
       </section>
 
       <section class="tools">
+        <h3>Tools</h3>
         <ul>
           <li>Git</li>
-          <li>Zsh</li>
-          <li>Sublime Text</li>
-        </ul>
-      </section>
-
-      <section class="methodologies">
-        <ul>
-          <li>MVC</li>
-          <li>REST</li>
-          <li>Agile (Scrum)</li>
+          <li>Unix CLI (Zsh)</li>
+          <li>Gulp.js</li>
         </ul>
       </section>
 
@@ -66,28 +97,32 @@
 
 
     <section class="work-history">
+      <h2>Work history</h2>
 
       <section class="past-job builtvisible">
 
         <p class="date">May 2015 - present</p> <!-- date -->
+        <p class="employer">Builtvisible</p> <!-- employer -->
         <p class="jobtitle">Front-end Developer</p> <!-- jobtitle -->
-        <p class="text">Description here</p> <!-- text -->
+        <p class="text">I create interactive infographics to specification from PSD and Illustrator designs, making use of CSS3 animations, SVG and D3.js. I also attend creative brainstorming sessions to provide feedback on whether ideas for upcoming projects are feasible from a web development perspective - as well as to inform and suggest alternative possibilities. I'm involved in interviewing candidates to join my team.</p> <!-- text -->
 
       </section> <!-- past-job builtvisible -->
 
       <section class="past-job metabroadcast">
 
         <p class="date">February 2015 - April 2015</p> <!-- date -->
-        <p class="jobtitle">Creative Tecnologist</p> <!-- jobtitle -->
-        <p class="text">Backbone.js application.</p> <!-- text -->
+        <p class="employer">Metabroadcast</p> <!-- employer -->
+        <p class="jobtitle">Creative Technologist</p> <!-- jobtitle -->
+        <p class="text">Created an MVC-based Backbone.js application with Handlebars templating from scratch. Carried out initial wireframing and a user testing session. Made use of RESTful APIs and ajax.</p> <!-- text -->
 
       </section> <!-- past-job metabroadcast -->
 
       <section class="past-job wanderingbear">
 
         <p class="date">March 2014 - November 2014</p> <!-- date -->
+        <p class="employer">Wandering Bear</p> <!-- employer -->
         <p class="jobtitle">Junior Front-end Web Developer</p> <!-- jobtitle -->
-        <p class="text">Created responsive, cross-browser tested websites for a range of clients using HTML, LESS and SilverStripe and Expression Engine content management systems.</p> <!-- text -->
+        <p class="text">Created responsive, cross-browser tested websites for a range of clients using HTML, LESS, jQuery and SilverStripe and Expression Engine content management systems.</p> <!-- text -->
 
       </section> <!-- past-job wanderingbear -->
 
@@ -95,6 +130,7 @@
       <section class="past-job volunteercentre">
 
         <p class="date">March 2013 - June 2013</p> <!-- date -->
+        <p class="employer">Volunteer Centre Westminster</p> <!-- employer -->
         <p class="jobtitle">Volunteer Web Manager</p> <!-- jobtitle -->
         <p class="text">Used Insight CMS to maintain web pages, microsites and social media accounts. Applied information architecture techniques to improve usability.</p> <!-- text -->
 
@@ -104,14 +140,16 @@
 
     <section class="recent-work">
       <h2>Recent Work</h2>
-      Responsive front-end for:
+      <p>Responsive front-end for:</p>
       <ul>
-        <li>leadersquest.org</li>
-        <li>voteforbob.co.uk</li>
-        <li>kusiri.com</li>
-        <li>out-standing.org </li>
+        <li><a href="http://www.leadersquest.org" target="_blank">leadersquest.org</a></li>
+        <li><a href="https://www.voteforbob.co.uk" target="_blank">voteforbob.co.uk</a></li>
+        <li><a href="http://www.kusiri.com" target="_blank">kusiri.com</a></li>
+        <li><a href="https://www.out-standing.org" target="_blank">out-standing.org</a></li>
       </ul>
     </section> <!-- recent-work -->
+
+    <p class="small">Downloaded from <a href="http://sophgits.github.io/sophiechitty">http://sophgits.github.io/sophiechitty</a></p>
   </article>
 
 </body>
