@@ -36,6 +36,8 @@ section.interests .inner p {
 
 }
 
+p.small { display: none; }
+
 article#cv {
   // border: 1px solid gray;
   width: 98rem;
@@ -199,5 +201,12 @@ section.recent-work {
     display: none;
   }
 
+  article { position: relative; }
+  p.small {
+    display: block;
+    position: absolute; bottom: -16rem; right: 1rem;
+    font-size: 1.4rem;
+    opacity: 0.5;
+  }
   // a:link:after, a:visited:after { content: " (" attr(href) ") "; font-size: 90%; }
 }
