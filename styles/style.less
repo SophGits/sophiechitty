@@ -1,6 +1,7 @@
 @import 'reset';
 
 @pad: 1rem;
+@bigpad: 3rem;
 
 // Colours
 // @grey: #8099B2;
@@ -105,23 +106,30 @@ section.interests {
 section.skills {
   padding: @pad;
   background-color: @grey;
-  section {
+} // skills
+
+section.languages,
+section.libraries,
+section.tools {
+  display: inline-block;
+  padding: @pad;
+  width: 33%;
+  vertical-align: top;
+  background-color: @white;
+}
+
+.otherskills {
+  ul li, p {
     display: inline-block;
-    padding: @pad;
-    width: 33%;
-    vertical-align: top;
+    margin: 6px 4px 2px 0px;
+    padding: 4px 6px;
+  }
+  ul li {
+    border-radius: 1px;
     background-color: @white;
   }
-  section.languages {
-
-  }
-  section.libraries {
-
-  }
-  section.tools {
-
-  }
-} // skills
+  p {float: right}
+}
 
 section.work-history {
   padding: @pad;
@@ -129,7 +137,7 @@ section.work-history {
   section.past-job {
     background-color: @white;
     padding: @pad;
-    margin: 0 0 @pad 0;
+    margin: 0 0 @bigpad 0;
     .date { font-size: 1rem; text-transform: uppercase; margin-bottom: 0; }
     .employer { font-size: 1rem; font-weight: 700; text-transform: uppercase; }
     .jobtitle { line-height: 3rem; }
@@ -175,15 +183,24 @@ section.recent-work {
   }
 
   div.about-interests,
-  section.skills { display: inline-block; vertical-align: top; }
+  section.skills {
+    display: inline-block;
+    vertical-align: top;
+  }
 
   div.about-interests { width: 80%; }
 
   section.skills {
     padding-top: 0;
-    width: 19%;
-    > section { display: block; width: 100%; }
+    width: 18%;
+    > section.languages,
+    > section.libraries,
+    > section.tools {
+      display: block;
+      width: 100%;
+    }
   }
+
 
   section.work-history {
     > section {
